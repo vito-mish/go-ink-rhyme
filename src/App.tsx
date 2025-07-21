@@ -9,6 +9,7 @@ import { NewAppScreen } from '@react-native/new-app-screen'
 import React, { FC } from 'react'
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native'
 
+const aa = 666
 const App: FC = () => {
   const isDarkMode = useColorScheme() === 'dark'
 
