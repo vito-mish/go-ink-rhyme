@@ -1,30 +1,32 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import { NewAppScreen } from '@react-native/new-app-screen'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React, { FC } from 'react'
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native'
+import { Text, View } from 'react-native'
 
-const aa = 666
-const App: FC = () => {
-  const isDarkMode = useColorScheme() === 'dark'
-
+function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
+const Stack = createNativeStackNavigator()
+
+function RootStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomeScreen} />
+    </Stack.Navigator>
+  )
+}
+
+const App: FC = () => {
+  return (
+    <NavigationContainer>
+      <RootStack />
+    </NavigationContainer>
+  )
+}
 
 export default App

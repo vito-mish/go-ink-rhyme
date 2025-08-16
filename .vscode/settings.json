@@ -8,5 +8,7 @@
     "eslint.format.enable": true,
     "editor.formatOnSave": true,
     "java.configuration.updateBuildConfiguration": "automatic",
-    "cSpell.words": []
+    "cSpell.words": [
+        "xcworkspace"
+    ]
 }
