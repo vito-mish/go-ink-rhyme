@@ -26,6 +26,7 @@ export default defineConfig([
     },
     rules: {
       "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
       "space-infix-ops": "error",
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
