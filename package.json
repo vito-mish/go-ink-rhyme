@@ -10,6 +10,8 @@
     "prepare": "husky",
     "postinstall": "npx pod-install ios",
     "open:xc": "open ios/GoInkRhyme.xcworkspace",
+    "cp:android-key": "cp __Key__/android/gradle.properties android/gradle.properties",
+    "release:android": "npm run cp:android-key && cd android && ./gradlew bundleRelease && cd .. && open android/app/build/outputs/bundle/release",
     "test": "jest"
   },
   "dependencies": {
