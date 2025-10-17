@@ -6,7 +6,7 @@ export const screens: ScreenConfig[] = [
   {
     name: ScreenNames.Home,
     component: HomeScreen,
-    options: { title: '主頁' },
+    options: { title: '主頁', headerShown: false },
   },
   {
     name: ScreenNames.BattleTimer,

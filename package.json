@@ -10,6 +10,7 @@
     "prepare": "husky",
     "postinstall": "npx pod-install ios",
     "open:xc": "open ios/GoInkRhyme.xcworkspace",
+    "generate:assets": "node ./scripts/generate-assets-import",
     "cp:android-key": "cp __Key__/android/gradle.properties android/gradle.properties",
     "release:android": "npm run cp:android-key && cd android && ./gradlew bundleRelease && cd .. && open android/app/build/outputs/bundle/release",
     "test": "jest"
@@ -24,7 +25,9 @@
     "react-native": "0.80.1",
     "react-native-safe-area-context": "5.6.0",
     "react-native-screens": "4.14.1",
-    "react-native-splash-view": "0.0.18"
+    "react-native-splash-view": "0.0.18",
+    "styled-components": "6.1.19",
+    "styled-system": "5.1.5"
   },
   "devDependencies": {
     "@babel/core": "7.25.2",
@@ -41,6 +44,8 @@
     "@types/jest": "29.5.13",
     "@types/react": "19.1.0",
     "@types/react-test-renderer": "19.1.0",
+    "@types/styled-components-react-native": "5.2.5",
+    "@types/styled-system": "5.1.24",
     "eslint": "9.31.0",
     "eslint-plugin-jest": "29.0.1",
     "eslint-plugin-prettier": "5.5.3",

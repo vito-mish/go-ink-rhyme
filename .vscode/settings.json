@@ -9,6 +9,8 @@
     "editor.formatOnSave": true,
     "java.configuration.updateBuildConfiguration": "automatic",
     "cSpell.words": [
-        "xcworkspace"
+        "xalign",
+        "xcworkspace",
+        "yalign"
     ]
 }
