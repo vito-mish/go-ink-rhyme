@@ -8,7 +8,8 @@ export enum ScreenNames {
 
 type RootStackParamList = {
   [ScreenNames.Home]: undefined
-  [ScreenNames.BattleTimer]: { id: string }
+  [ScreenNames.BattleTimer]: undefined
+  // ex: [ScreenNames.BattleTimer]: { id: string }
 }
 
 export type HomeScreenProps = NativeStackScreenProps<RootStackParamList, ScreenNames.Home>
