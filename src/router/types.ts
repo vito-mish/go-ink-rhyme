@@ -2,18 +2,21 @@ import { NativeStackNavigationOptions, NativeStackScreenProps } from '@react-nav
 import { FC } from 'react'
 
 export enum ScreenNames {
-  Home = 'Home',
-  BattleTimer = 'BattleTimer',
+  Home = 'home',
+  BattleTimer = 'battle_timer',
+  Settings = 'settings',
 }
 
 type RootStackParamList = {
   [ScreenNames.Home]: undefined
   [ScreenNames.BattleTimer]: undefined
+  [ScreenNames.Settings]: undefined
   // ex: [ScreenNames.BattleTimer]: { id: string }
 }
 
 export type HomeScreenProps = NativeStackScreenProps<RootStackParamList, ScreenNames.Home>
 export type BattleTimerScreenProps = NativeStackScreenProps<RootStackParamList, ScreenNames.BattleTimer>
+export type SettingsScreenProps = NativeStackScreenProps<RootStackParamList, ScreenNames.Settings>
 
 export type ScreenConfig = {
   name: keyof RootStackParamList

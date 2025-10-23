@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import { Text, View } from 'react-native'
 
-import { BattleTimerScreenProps } from '../../router/types'
+import { SettingsScreenProps } from '../../router/types'
 
-export const BattleTimerScreen: FC<BattleTimerScreenProps> = () => {
+export const SettingsScreen: FC<SettingsScreenProps> = () => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Battle Timer Screen</Text>
+      <Text>Settings Screen</Text>
     </View>
   )
 }

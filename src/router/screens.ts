@@ -1,5 +1,6 @@
 import { BattleTimerScreen } from '../screens/BattleTimer'
 import { HomeScreen } from '../screens/Home'
+import { SettingsScreen } from '../screens/Settings'
 import { ScreenConfig, ScreenNames } from './types'
 
 export const screens: ScreenConfig[] = [
@@ -11,6 +12,11 @@ export const screens: ScreenConfig[] = [
   {
     name: ScreenNames.BattleTimer,
     component: BattleTimerScreen,
+    options: { headerShown: true },
+  },
+  {
+    name: ScreenNames.Settings,
+    component: SettingsScreen,
     options: { headerShown: true },
   },
 ]

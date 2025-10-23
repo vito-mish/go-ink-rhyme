@@ -1,4 +1,5 @@
 import React, { FC, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components/native'
 
 import images from '../../assets/images'
@@ -7,8 +8,14 @@ import { Button } from '../../components/Button'
 import { HomeScreenProps, ScreenNames } from '../../router/types'
 
 export const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
+  const { t } = useTranslation()
+
   const handleNavigateBattleTimer = useCallback(() => {
     navigation.navigate(ScreenNames.BattleTimer)
+  }, [navigation])
+
+  const handleNavigateSettings = useCallback(() => {
+    navigation.navigate(ScreenNames.Settings)
   }, [navigation])
 
   return (
@@ -17,7 +24,8 @@ export const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
         <StretchImage file={images.HomeBg} />
       </Box>
 
-      <ActionButton title="Go to Battle Timer" onPress={handleNavigateBattleTimer} />
+      <ActionButton title={t('battle_timer_title')} onPress={handleNavigateBattleTimer} />
+      <ActionButton title={t('settings_title')} onPress={handleNavigateSettings} />
     </Container>
   )
 }
@@ -29,4 +37,4 @@ const Container = styled(Box)`
   padding-horizontal: 40px;
 `
 
-const ActionButton = styled(Button).attrs({ boxProps: { style: { opacity: 0.75 } } })``
+const ActionButton = styled(Button).attrs({ boxProps: { style: { opacity: 0.75, marginVertical: 12 } } })``
