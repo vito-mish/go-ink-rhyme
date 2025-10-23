@@ -4,7 +4,7 @@ import styled from 'styled-components/native'
 import { theme } from '../../styles/theme'
 import { Box } from '../Box'
 import { BoxProps } from '../Box/types'
-import { Body3 } from '../Text'
+import { Heading3 } from '../Text'
 
 export const BUTTON_HEIGHT = 56
 
@@ -17,7 +17,7 @@ export interface ButtonProps {
 export const Button: FC<ButtonProps> = ({ title, onPress, boxProps }) => {
   return (
     <Container onPress={onPress} {...boxProps}>
-      <Body3>{title}</Body3>
+      <Heading3 bold>{title}</Heading3>
     </Container>
   )
 }

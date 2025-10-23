@@ -21,9 +21,9 @@ const SText: any = styled(RNText)(
 )
 
 export const Text: FC<TextProps> = ({
-  size = 2,
+  size = 16,
   bold,
-  weight = 0,
+  weight = 400,
   align,
   color = theme.colors.gray[5],
   lineHeight = 18,
@@ -31,9 +31,9 @@ export const Text: FC<TextProps> = ({
 }) => {
   return (
     <SText
-      fontWeight={bold ? 1 : weight}
+      fontWeight={bold ? 600 : weight}
       fontSize={size}
-      lineHeight={lineHeight ? `${lineHeight}px` : size}
+      lineHeight={lineHeight ? `${lineHeight}px` : `${size}px`}
       textAlign={align}
       color={color}
       allowFontScaling={false}
@@ -43,14 +43,12 @@ export const Text: FC<TextProps> = ({
 }
 
 export const OneLineText: FC<TextProps> = (props) => <Text numberOfLines={1} {...props} />
-export const Heading1: FC<TextProps> = (props) => (
-  <Text size={7} lineHeight={39.2} letterSpacing={1} weight={1} {...props} />
-) // 28
-export const Heading2: FC<TextProps> = (props) => <Text size={6} lineHeight={38.4} weight={1} {...props} /> // 24
-export const Heading3: FC<TextProps> = (props) => <Text size={5} lineHeight={28} weight={1} {...props} /> // 20
-export const Body1: FC<TextProps> = (props) => <Text size={5} lineHeight={28} {...props} /> // 20
-export const Body2: FC<TextProps> = (props) => <Text size={4} lineHeight={28.8} {...props} /> // 18
-export const Body3: FC<TextProps> = (props) => <Text size={3} lineHeight={28.8} {...props} /> // 16
-export const Body4: FC<TextProps> = (props) => <Text size={2} lineHeight={25.2} {...props} /> // 14
-export const Body5: FC<TextProps> = (props) => <Text size={1} lineHeight={21.6} {...props} /> // 12
-export const Body6: FC<TextProps> = (props) => <Text size={0} lineHeight={14} {...props} /> // 10
+export const Heading1: FC<TextProps> = (props) => <Text size={28} lineHeight={39.2} letterSpacing={1} bold {...props} />
+export const Heading2: FC<TextProps> = (props) => <Text size={24} lineHeight={38.4} bold {...props} />
+export const Heading3: FC<TextProps> = (props) => <Text size={20} lineHeight={28.8} bold {...props} />
+export const Body1: FC<TextProps> = (props) => <Text size={20} lineHeight={28.8} {...props} />
+export const Body2: FC<TextProps> = (props) => <Text size={18} lineHeight={28.8} {...props} />
+export const Body3: FC<TextProps> = (props) => <Text size={16} lineHeight={28.8} {...props} />
+export const Body4: FC<TextProps> = (props) => <Text size={14} lineHeight={25.2} {...props} />
+export const Body5: FC<TextProps> = (props) => <Text size={12} lineHeight={21.6} {...props} />
+export const Body6: FC<TextProps> = (props) => <Text size={10} lineHeight={14} {...props} />
